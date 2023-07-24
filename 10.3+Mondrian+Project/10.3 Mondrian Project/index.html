@@ -19,11 +19,89 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    .grid-container {
+      background-color: #000;
+      display: grid;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 11px 155px 20px;
+      gap: 9px;
+      width: min-content;
+    }
+
+    .red-div {
+      background-color: #E72F24;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+    }
+
+    .first-white {
+      grid-column-start: 2;
+      grid-column-end: -1;
+    }
+
+    .second-white {
+      grid-row-start: 2;
+      grid-row-end: -2;
+    }
+
+    .third-white {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      grid-column-end: -2;
+      grid-row-end: -2;
+    }
+
+    .blue {
+      background-color: #004592;
+    }
+
+    .black {
+      background-color: #232629;
+    }
+
+    .fourth-white {
+      grid-row-start: -2;
+    }
+
+    .yellow {
+      background-color: #F9D01E;
+      grid-column-start: 2;
+    }
+    
+    .second-black {
+      grid-column-start: 3;
+    }
+
+    .fifth-white {
+      grid-column-start: -2;
+      grid-row-start: 4;
+      grid-row-end: -1;
+    }
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+  <div class="grid-container">
+    <div class="red-div"></div>
+    <div class="white first-white"></div>
+    <div class="white second-white"></div>
+    <div class="white third-white"></div>
+    <div class="blue"></div>
+    <div class="black first-black"></div>
+    <div class="white fourth-white"></div>
+    <div class="yellow"></div>
+    <div class="black second-black"></div>
+    <div class="white fifth-white"></div>
+  </div>
 </body>
 
 </html>
